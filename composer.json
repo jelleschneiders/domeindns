@@ -1,0 +1,87 @@
+{
+    "name": "schneidersit/domeindns",
+    "type": "project",
+    "description": "DomeinDNS app",
+    "keywords": [
+        "domeindns",
+        "powerdns",
+        "laravel"
+    ],
+    "homepage": "https://app.domeindns.nl",
+    "authors": [
+        {
+            "name": "Jelle Schneiders",
+            "email": "jelleschneiders99@gmail.com",
+            "homepage": "https://jelleschneiders.com",
+            "role": "developer"
+        }
+    ],
+    "support": {
+        "email": "info@domeindns.nl",
+        "issues": "https://github.com/jelleschneiders/domeindns-app/issues"
+    },
+    "license": "MIT",
+    "require": {
+        "php": "^7.3",
+        "donatj/phpuseragentparser": "^0.13.0",
+        "fideloper/proxy": "^4.0",
+        "guzzlehttp/guzzle": "~6.0",
+        "jeremykendall/php-domain-parser": "^5.5",
+        "laracasts/flash": "^3.0",
+        "laravel/framework": "^7.0",
+        "laravel/tinker": "^2.0",
+        "laravel/ui": "^2.0",
+        "league/flysystem-aws-s3-v3": "^1.0",
+        "pear/net_dns2": "^1.4",
+        "phpgangsta/googleauthenticator": "dev-master",
+        "ramsey/uuid": "^3.9",
+        "sentry/sentry-laravel": "1.7.0",
+        "spatie/laravel-personal-data-export": "^1.0"
+    },
+    "require-dev": {
+        "facade/ignition": "^2.0",
+        "filp/whoops": "^2.0",
+        "fzaninotto/faker": "^1.4",
+        "mockery/mockery": "^1.0",
+        "nunomaduro/collision": "^4.1",
+        "phpunit/phpunit": "^8.5"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    }
+}

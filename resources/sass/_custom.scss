@@ -1,0 +1,58 @@
+html {
+    /* Adjust font size */
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    /* Font varient */
+    font-variant-ligatures: none;
+    -webkit-font-variant-ligatures: none;
+    /* Smoothing */
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+}
+
+.logo-domeindns {
+    color: white;
+    font-size: 2.25rem;
+    padding: 5px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.bg-gradient-primary {
+    background-image: none;
+    background-color: #fff;
+}
+
+.sidebar-dark .nav-item .nav-link i, .sidebar-dark .nav-item .nav-link {
+    color: #333;
+}
+
+.fa-globe {
+    color: #4e73df;
+}
+
+.sidebar-dark .nav-item .nav-link:active, .sidebar-dark .nav-item .nav-link:active i, .sidebar-dark .nav-item .nav-link:focus, .sidebar-dark .nav-item .nav-link:focus i, .sidebar-dark .nav-item .nav-link:hover, .sidebar-dark .nav-item .nav-link:hover i {
+    color: #111;
+}
+
+.shadow {
+    box-shadow: none !important;
+}
+
+.sidebar.toggled .nav-item .nav-link span {
+    font-size: .80rem;
+}
+
+.recordcontent {
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    max-width:25rem;
+}
